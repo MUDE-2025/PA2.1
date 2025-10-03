@@ -33,9 +33,6 @@ jobs:
           pip install nbformat nbconvert
           python -m pip install ipykernel
           python -m ipykernel install --user --name=python3
-          if [ -n "$original_line" ]; then
-            echo "$original_line" >> requirements.txt
-          fi
 
       - name: Remove solution cells
         run: |
@@ -117,6 +114,26 @@ jobs:
                       with open(markdown_file, "w") as f:
                           f.writelines(filtered_lines)
           '
+      - name: Remove output
+        run: |
+          python -c "
+          import os
+          import nbformat
+          # Walk through all files in the repository
+          for root, _, files in os.walk('.'):
+            for file in files:
+              if file.endswith('.ipynb'):
+                notebook_file = os.path.join(root, file)
+                with open(notebook_file) as f:
+                  notebook = nbformat.read(f, as_version=4)
+                # Remove outputs from all code cells
+                for cell in notebook.cells:
+                  if cell.cell_type == 'code':
+                    cell.outputs = []
+                    cell.execution_count = None
+                with open(notebook_file, 'w') as f:
+                  nbformat.write(notebook, f)
+          "
 
       - name: Commit and push changes assignment version
         env:
@@ -132,8 +149,9 @@ jobs:
           else
             git commit -m "Generate assignment version"
             git rm .github/workflows/generate-student-notebook.yml
+            git rm requirements.txt
             git add .
-            git commit -m "Remove workflow file from assignment branch"
+            git commit -m "Remove requirements and workflow file from assignment branch"
             git push origin assignment --force
           fi
 
@@ -217,7 +235,8 @@ jobs:
           else
             git commit -m "Generate solution version"
             git rm .github/workflows/generate-student-notebook.yml
+            git rm requirements.txt
             git add .
-            git commit -m "Remove workflow file from solution branch"
+            git commit -m "Remove requirements and workflow file from solution branch"
             git push origin solution --force
           fi
