@@ -4,14 +4,13 @@
 
 You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.1/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/PA2.1/README.html. You can obtain your personal repository for submission on: https://classroom.github.com/a/...
 
-Before you can start this assignment, read the theory pages in the book chapter [Object-oriented programming](https://mude.citg.tudelft.nl/book/programming_2_1/programming/week_2_1.html):
-- [Classes and Object-Oriented Programming in Python](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/intro.html)
-- [What are classes?](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/classes.html)
-- [Encapsulation](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/encapsulation.html)
-- [Inheritance](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/Inheritance.html)
-- [Polymorphism](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/Polymorphism.html)
-- [Documentation: Good practises](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/documentation.html)
-- [Exercise](https://mude.citg.tudelft.nl/book/programming_2_1/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/exercise.html)
+Before you can start this assignment, read the theory pages in the book chapter [Object-oriented programming](https://mude.citg.tudelft.nl/book/2025/programming/week_2_1.html):
+- [Classes and Object-Oriented Programming in Python](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/intro.html)
+- [What are classes?](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/classes.html)
+- [Encapsulation](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/encapsulation.html)
+- [Inheritance](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/Inheritance.html)
+- [Polymorphism](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/Polymorphism.html)
+- [Exercise](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/exercise.html)
 
 This assignment will help you understand more about Object Oriented Programming (OOP) in Python and why OOP is an attractive programming paradigm in many applications. In Python, OOP is done through classes, so to show you how it can make you think and code differently we will **code a simple PDE solver twice, with and without OOP**.
 
