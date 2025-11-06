@@ -40,15 +40,18 @@ We will use **Finite Differences** to solve this problem for $t\in[0,t_\mathrm{e
 
 - We will solve the problem on a grid over $x$ with $M$ points and spacing $\Delta x$
 - Set the initial temperature $T=T_\mathrm{init}$ at every point $m\in{1,...,M}$
-- Go through each time step in sequence. At time $t=(n+1)\Delta t$:
-  - Set the temperature on the left: $T^{n+1}_1 = T_\mathrm{left}$
-  - At each interior point $m\in{1,...,M-1}$, set:
+- Go through each time step in sequence. 
+- At time $t=(n+1)\Delta t$:, set the temperature on the left:
 
-    $T^{n+1}_m = T^n_m + \kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{m+1}-2T^n_m+T^n_{m-1}\right)$
+$$T^{n+1}_1 = T_\mathrm{left}$$
 
-  - Set the flux on the right:
-    
-    $T^{n+1}_M = T^n_M + 2\kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{M-1}-T^n_M+h_\mathrm{right}\Delta x\right)$
+- At time $t=(n+1)\Delta t$:, at each interior point $m\in{1,...,M-1}$, set:
+
+$$T^{n+1}_m = T^n_m + \kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{m+1}-2T^n_m+T^n_{m-1}\right)$$
+
+- At time $t=(n+1)\Delta t$:, set the flux on the right:
+
+$$T^{n+1}_M = T^n_M + 2\kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{M-1}-T^n_M+h_\mathrm{right}\Delta x\right)$$
     
 - Go through every time step and return a time sequence of grid values $T(x,t)$ for plotting
 
