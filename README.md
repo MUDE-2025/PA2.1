@@ -27,9 +27,11 @@ This can be translated to the following initial and boundary conditions:
 $$
 T(x,0) = T_\mathrm{init},\quad x\in[0,L]
 $$
+
 $$
 T(0,t) = T_\mathrm{left},\quad t>0
 $$
+
 $$
 \frac{\partial T}{\partial x}(L,t) = h_\mathrm{right},\quad t>0
 $$
@@ -41,9 +43,13 @@ We will use **Finite Differences** to solve this problem for $t\in[0,t_\mathrm{e
 - Go through each time step in sequence. At time $t=(n+1)\Delta t$:
   - Set the temperature on the left: $T^{n+1}_1 = T_\mathrm{left}$
   - At each interior point $m\in{1,...,M-1}$, set:
-    $$T^{n+1}_m = T^n_m + \kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{m+1}-2T^n_m+T^n_{m-1}\right)$$
+
+    $T^{n+1}_m = T^n_m + \kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{m+1}-2T^n_m+T^n_{m-1}\right)$
+
   - Set the flux on the right:
-    $$T^{n+1}_M = T^n_M + 2\kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{M-1}-T^n_M+h_\mathrm{right}\Delta x\right)$$
+    
+    $T^{n+1}_M = T^n_M + 2\kappa\frac{\Delta t}{\Delta x^2}\left(T^n_{M-1}-T^n_M+h_\mathrm{right}\Delta x\right)$
+    
 - Go through every time step and return a time sequence of grid values $T(x,t)$ for plotting
 
 You'll solve this using functional programming and objective-oriented programming in two parts:
@@ -52,6 +58,9 @@ You'll solve this using functional programming and objective-oriented programmin
 2. [Object-oriented programming](./2_oop.ipynb)
 
 You pass this PA if you:
-- ...
+- For both your `Diffusion` as `MyDiffusion` class in the OOP part:
+  - It doesn't crash during setup
+  - The boundary conditions are present at step 0
+  - The solver doesn't give the correct results
 
 > By Iuri Rocha, Marcel Zijlema, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
