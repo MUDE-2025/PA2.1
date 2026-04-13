@@ -2,7 +2,7 @@
 
 *Due: Friday, November 14th.*
 
-You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.1/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/PA2.1/README.html. You can obtain your personal repository for submission on: https://classroom.github.com/a/jogcPuwd
+You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.1/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/PA2.1/README.html. You can obtain your personal repository for submission on: https://classroom.github.com/a/jogcPuwd. If you don't want to make this assignment as part of a grade, access the assignment here: https://github.com/MUDE-2025/PA2.1.
 
 Before you can start this assignment, read the theory pages in the book chapter [Object-oriented programming](https://mude.citg.tudelft.nl/book/2025/programming/week_2_1.html):
 - [Classes and Object-Oriented Programming in Python](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TeachBooks_learn-programming/mude-2025/book/python/oop/intro.html)
